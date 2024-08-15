@@ -16,6 +16,14 @@ rebuild:
 tests:
 	./$(TEST)
 
+
+format:
+	clang-format -style=google -n */*.c */*.h 
+	sleep 1
+	reset
+	clang-format -style=google -i */*.c */*.h 
+	clang-format -style=google -n */*.c */*.h 
+
 memory: 
 	valgrind -s --track-origins=yes --leak-check=full ./$(TEST)
 
