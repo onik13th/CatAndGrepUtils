@@ -1,16 +1,24 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -std=c11
 TARGET_1 = my_cat
-FLAG_PARSER_C = flag_parser.c
+FLAG_PARSER_C = parser/flag_parser.c
+TEST = integration_tests.sh
 
 all: $(TARGET_1)
 
 $(TARGET_1): 
-	$(CC) $(CFLAGS) -o $(TARGET_1) main.c cat_flags.c cat_file_handler.c cat_main_controller.c $(FLAG_PARSER_C)
+	$(CC) $(CFLAGS) -o $(TARGET_1) main.c flags/cat_flags.c handler/file_handler.c controller/cat_main_controller.c $(FLAG_PARSER_C)
 
 rebuild: 
 	make clean 
 	make all
 
+tests:
+	./$(TEST)
+
+memory: 
+	valgrind -s --track-origins=yes --leak-check=full ./$(TEST)
+
 clean:
 	rm -rf my_cat
+
