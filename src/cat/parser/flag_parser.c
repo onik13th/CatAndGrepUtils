@@ -40,7 +40,7 @@ CatFlags cat_parse_flags(int argc, char *argv[]) {
         flags.tab = true;
         break;
       case '?':  // неизвестный флаг
-        fprintf(stderr, "usage: s21_cat [-benstvET] [file ...]\n");
+        fprintf(stderr, "usage: my_cat [-benstvET] [file ...]\n");
         exit(EXIT_FAILURE);
     }
   }
