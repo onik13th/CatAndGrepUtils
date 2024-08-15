@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -std=c11
-TARGET_1 = s21_cat
+TARGET_1 = my_cat
 FLAG_PARSER_C = flag_parser.c
 
 all: $(TARGET_1)
@@ -13,4 +13,4 @@ rebuild:
 	make all
 
 clean:
-	rm -rf s21_cat
+	rm -rf my_cat
