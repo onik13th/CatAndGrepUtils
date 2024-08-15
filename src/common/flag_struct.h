@@ -1,11 +1,13 @@
 #ifndef FLAG_STRUCT_H
 #define FLAG_STRUCT_H
 
+#include <getopt.h>
+#include <regex.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include <string.h>
-#include <getopt.h>
+#include <unistd.h>
 
 typedef struct {
   bool numNonBlank;        // -b
