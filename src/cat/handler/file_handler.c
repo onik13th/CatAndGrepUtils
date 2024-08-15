@@ -24,7 +24,7 @@ void cat_file(FILE *file, CatFlags flags, const char *table[static 256]) {
         if (squeeze) {
           continue;
         }
-        
+
         squeeze = true;
       } else {
         squeeze = false;

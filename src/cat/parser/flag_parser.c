@@ -44,6 +44,6 @@ CatFlags cat_parse_flags(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
   }
-  
+
   return flags;
 }

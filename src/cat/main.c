@@ -1,6 +1,6 @@
 #include "../common/flag_struct.h"
-#include "flags/cat_flags.h"
 #include "controller/cat_main_controller.h"
+#include "flags/cat_flags.h"
 #include "parser/flag_parser.h"
 
 // argc - счетчик количества параметров командой строки argc.

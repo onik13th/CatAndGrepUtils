@@ -16,7 +16,7 @@ void cat(int argc, char *argv[], CatFlags flags,
       fclose(file);
     }
   }
-  
+
   if (!has_files) {
     cat_file(stdin, flags, table);
   }
